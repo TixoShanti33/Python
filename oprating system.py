@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 log = 0
 print('Hello please enter the username you would like to use below')
@@ -114,5 +114,8 @@ while True:
         print("You have been logged out and your username is changed")
         log = 0
 
-    if userinput == "whatismyname" and log == 1:
-        print(username)
+    if userinput == "whoami" and log == 1:
+        print(usernamei)
+
+    if userinput == "quit":
+        exit()

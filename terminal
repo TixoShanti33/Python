@@ -1,0 +1,92 @@
+#!/usr/bin/python3
+
+import subprocess as s
+import pyfiglet
+userinput = "" 
+password = "pythonpi"
+username = "test_usr"
+print("logging in as ")
+print(username)
+print("and your password is "+password)
+while True:
+    userinput = input()
+    
+    if userinput == "open":
+        userinput = input()
+        s.call([userinput])
+        print(userinput)
+        userinput = ""
+
+    if userinput == "figlet":
+        userinput = input()
+        pyfiglet.print_figlet(userinput)
+        userinput = ""
+
+    if userinput == "small":
+        pyfiglet.print_figlet("how small?")
+       
+    if userinput == "BIG":
+
+        pyfiglet.print_figlet("is this big enough?")
+
+    if userinput == "sudo change.password":
+        while userinput != password:
+             print("please enter password")
+        
+             print("\/\/\/\/")
+             userinput = input()
+             if userinput != password:
+                 print("Wrong password")
+        print("Please enter new password")
+        password = input()
+        userinput = ""
+
+    if userinput == "add":
+        userinput = input()
+        userinput2 = input()
+        anwser = float(userinput) + float(userinput2)
+        print(anwser)
+
+    if userinput == "sq":
+        userinput = input()
+        anwser = float(userinput) * float(userinput)
+        print(anwser)
+
+    if userinput == "clear":
+        print("                                "*80)
+
+    if userinput =="a":
+        print("apple")
+
+    if userinput == "b":
+        print("ball")
+
+    if userinput == "sudo change.username":
+        print("who are you type your name")
+        while userinput != username:
+            userinput = input()
+            if userinput != username:
+                print("THATS NOT WHO YOU ARE YOU ARE TRYING TO HACK INTO SOMEONES COMPUTER")
+        print("Ok who would you like to be now")
+        userinput = ""
+
+    if userinput == "*":
+        userinput = input()
+        userinput2 = input()
+        anwser = float(userinput) * float(userinput2)
+        print(anwser)
+
+    if userinput == "/":
+        userinput = input()
+        userinput2 = input()
+        anwser = float(userinput) / float(userinput2)
+        print(anwser)
+
+    
+    if userinput == "do":
+       	userinput = input()
+        anwser = int(userinput) + int(userinput)
+        print(anwser)
+
+    if userinput == "SIT":
+        print("no I don't wan't to")

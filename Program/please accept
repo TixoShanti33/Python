@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import subprocess as s
+print("Type yes to accept")
+userinput = input('yes')
+if userinput == "yes":
+    print("starting program build")
+    s.call(["build.sh"])
+    print("done")
